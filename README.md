@@ -19,6 +19,14 @@ Database schema: https://pasteboard.co/9128d1zO4QLs.png
 composer install
 ```
 
+Setup environment
+
+```bash
+cp .env.example .env
+```
+
+Remember change information of database,base url, smtp...
+
 ## Database Migration & Seed
 
 ```bash
@@ -35,3 +43,19 @@ Execute manually via CLI:
 ```bash
 php artisan inisev:send
 ```
+
+
+Note: 
+This app using Google Gmail App is SMTP, so you need to account and password to using send mail function. 
+I put demo account in **.env.example**
+
+```
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=work.tuanha@gmail.com
+MAIL_PASSWORD=oidqtacpcoqvfsvt
+MAIL_ENCRYPTION=tls
+MAIL_FROM_NAME="${APP_NAME}"
+```
+
